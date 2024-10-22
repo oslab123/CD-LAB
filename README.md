@@ -1,9 +1,9 @@
 Cycle 2 - Terminal Commands
 
-1) ->lex pgm.l
-   ->gcc lex.yy.c
-   ->./a.out
-   
+1) ->lex pgm.l  
+   ->gcc lex.yy.c  
+   ->./a.out  
+     
 2),3)
    ->yacc -d pgm.y
    ->lex pgm.l
