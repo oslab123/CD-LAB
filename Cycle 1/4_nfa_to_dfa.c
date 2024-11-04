@@ -32,9 +32,9 @@ void main()
  printf("Enter the number of alphabets?\n");
  printf("NOTE:- [ use letter e as epsilon]\n");
  printf("NOTE:- [e must be last character ,if it is present]\n");
- printf("\nEnter No of alphabets and alphabets?\n");
  scanf("%d",&noalpha);
  getchar();
+ printf("\nEnter the alphabets?\n");
  for(i=0;i<noalpha;i++)
  {
 
@@ -74,8 +74,6 @@ void main()
  complete=-1;
  i=-1;
  printf("\nEquivalent DFA.....\n");
- printf(".......................\n");
- 
  printf("Trnsitions of DFA\n");
 
  newstate.nst[start]=start;
@@ -120,27 +118,27 @@ void main()
     printf("%c\t",alphabet[k]);
     printnewstate(tmpstate);
     printf("\n");
-    }
-    else
-    {
+   }
+   else
+   {
     printnewstate(newstate);
     printf("%c\t", alphabet[k]);
     printf("NULL\n");
-    }
+   }
 
   }
    }
  printf("\nStates of DFA:\n");
  for(i=0;i<=complete;i++)
  printnewstate(hash[i]);  
- printf("\n Alphabets:\n");
+ printf("\n \nAlphabets:\n");
  for(i=0;i<noalpha;i++)
- printf("%c\t",alphabet[i]);
- printf("\n Start State:\n");
-  printf("q%d",start);
- printf("\nFinal states:\n");
+ printf("\t%c\t",alphabet[i]);
+ printf("\n\n Start State:\n");
+ printf("\tq%d",start);
+ printf("\n\nFinal states:\n");
  findfinalstate();
-
+printf("\n");
 }
 int insertdfastate(struct node1 newstate)
 {
@@ -202,8 +200,8 @@ void findfinalstate()
 {
  int i,j,k,t;
 
-  for(i=0;i<=complete;i++)
-  {
+ for(i=0;i<=complete;i++)
+ {
   for(j=1;j<=nostate;j++)
   {
    for(k=0;k<nofinal;k++)
@@ -217,7 +215,7 @@ void findfinalstate()
     }
    }
   }
-  }
+ }
 }
 
 
